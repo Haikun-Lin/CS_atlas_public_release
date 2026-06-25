@@ -1,0 +1,28 @@
+software_or_package,language_or_platform,version,used_in,purpose,record_source
+Python,Python,3.11.13,All Python notebooks,Notebook execution runtime,environment/export_python_environment.py
+Jupyter/IPython,Python,9.8.0,All Python notebooks,Interactive notebook execution,environment/export_python_environment.py
+Python standard library,Python standard library,3.11.13,Notebook 01,"Runtime logging, timestamps, elapsed-time measurement, and majority-lineage counting with time, datetime, and collections",environment/export_python_environment.py
+Scanpy,Python,1.11.4,Notebooks 01-03,Single-cell AnnData analysis and plotting,environment/export_python_environment.py
+AnnData,Python,0.12.2,Notebooks 01-03,Processed single-cell object representation,environment/export_python_environment.py
+pandas,Python,2.3.1,Notebooks 01-03,Tabular data handling and export,environment/export_python_environment.py
+NumPy,Python,2.2.6,Notebooks 01-03,Numerical calculations and random sampling,environment/export_python_environment.py
+SciPy,Python,1.15.3,Notebooks 01-02 and CellChat input export,"Sparse matrices, statistics, and Matrix Market export",environment/export_python_environment.py
+Matplotlib,Python,3.10.5,Notebooks 01-03,Figure generation,environment/export_python_environment.py
+Seaborn,Python,0.13.2,Notebooks 01-03,Statistical visualization,environment/export_python_environment.py
+GSEApy,Python,1.1.11,Notebooks 01-03,Gene-set and GO enrichment analyses,environment/export_python_environment.py
+Plotly,Python,6.3.0,Notebook 01,Sankey and interactive-style figure construction,environment/export_python_environment.py
+OpenPyXL,Python,3.1.5,Notebook 01,Excel supplementary-table formatting,environment/export_python_environment.py
+rpy2,Python/R bridge,3.6.4,Notebook 02,Notebook R bridge used by preserved analysis sections,environment/export_python_environment.py
+adjustText,Python,1.3.0,Notebooks 02-03,Non-overlapping text labels in plots,environment/export_python_environment.py
+R,R,4.5.1,CellChat scripts,R execution runtime,environment/export_cellchat_r_environment.R
+CellChat,R,2.2.0,CellChat runner and downstream-analysis scripts,Cell-cell communication inference and visualization,environment/export_cellchat_r_environment.R
+Matrix,R,1.7.4,CellChat runner scripts,Sparse matrix input handling,environment/export_cellchat_r_environment.R
+future,R,1.69.0,CellChat runner scripts,Parallel execution configuration,environment/export_cellchat_r_environment.R
+dplyr,R,1.2.0,CellChat downstream-analysis scripts,Data manipulation,environment/export_cellchat_r_environment.R
+purrr,R,1.2.1,CAR-T CellChat downstream-analysis script,Functional iteration,environment/export_cellchat_r_environment.R
+tibble,R,3.3.1,CAR-T CellChat downstream-analysis script,Tidy tabular outputs,environment/export_cellchat_r_environment.R
+ggplot2,R,4.0.2,CellChat downstream-analysis scripts,Figure generation,environment/export_cellchat_r_environment.R
+pheatmap,R,1.0.13,SLE CellChat downstream-analysis script,Heatmap visualization,environment/export_cellchat_r_environment.R
+RColorBrewer,R,1.1.3,SLE CellChat downstream-analysis script,Color palettes,environment/export_cellchat_r_environment.R
+circlize,R,0.4.17,CellChat downstream-analysis scripts,Circular network visualization,environment/export_cellchat_r_environment.R
+scales,R,1.4.0,CellChat downstream-analysis scripts,Plot scaling and formatting,environment/export_cellchat_r_environment.R

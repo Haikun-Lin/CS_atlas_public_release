@@ -1,0 +1,347 @@
+{
+  "report_type": "processed_anndata_schema",
+  "notebook": "03_t_lineage_cart_analysis.ipynb",
+  "object_name": "adata_t",
+  "source_file_basename": "adata_t.h5ad",
+  "generated_at": "2026-06-24T14:57:49",
+  "privacy_note": "This report intentionally excludes expression matrices, cell barcodes, sample IDs, patient IDs, and the full gene list.",
+  "object_dimensions": {
+    "n_cells": 1290418,
+    "n_genes": 17249,
+    "obs_names_unique": true,
+    "var_names_unique": true
+  },
+  "required_obs_columns": [
+    "sample_id",
+    "disease",
+    "stage",
+    "severity",
+    "t_anno"
+  ],
+  "missing_required_obs_columns": [],
+  "expected_categories": {
+    "disease": [
+      "CAR-T_CRS",
+      "COVID19",
+      "SLE",
+      "HC"
+    ],
+    "stage": [
+      "CAR-T_CRS_before",
+      "CAR-T_CRS_pro",
+      "CAR-T_CRS_con",
+      "COVID19_pro",
+      "COVID19_con",
+      "SLE",
+      "HC"
+    ],
+    "severity": [
+      "Moderate",
+      "Severe",
+      "No_CRS",
+      "HC"
+    ]
+  },
+  "observed_expected_category_coverage": {
+    "disease": {
+      "expected": [
+        "CAR-T_CRS",
+        "COVID19",
+        "SLE",
+        "HC"
+      ],
+      "observed_expected_values": [
+        "CAR-T_CRS",
+        "COVID19",
+        "HC",
+        "SLE"
+      ],
+      "missing_expected_values": []
+    },
+    "stage": {
+      "expected": [
+        "CAR-T_CRS_before",
+        "CAR-T_CRS_pro",
+        "CAR-T_CRS_con",
+        "COVID19_pro",
+        "COVID19_con",
+        "SLE",
+        "HC"
+      ],
+      "observed_expected_values": [
+        "CAR-T_CRS_before",
+        "CAR-T_CRS_con",
+        "CAR-T_CRS_pro",
+        "COVID19_con",
+        "COVID19_pro",
+        "HC",
+        "SLE"
+      ],
+      "missing_expected_values": []
+    },
+    "severity": {
+      "expected": [
+        "Moderate",
+        "Severe",
+        "No_CRS",
+        "HC"
+      ],
+      "observed_expected_values": [
+        "HC",
+        "Moderate",
+        "No_CRS",
+        "Severe"
+      ],
+      "missing_expected_values": []
+    }
+  },
+  "obs": {
+    "n_columns": 14,
+    "columns": [
+      "sample_id",
+      "batch",
+      "_scvi_batch",
+      "_scvi_labels",
+      "leiden1_anno",
+      "n_genes",
+      "n_genes_by_counts",
+      "total_counts",
+      "total_counts_mt",
+      "pct_counts_mt",
+      "t_anno",
+      "disease",
+      "severity",
+      "stage"
+    ],
+    "column_summary": {
+      "sample_id": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 346,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "batch": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 24,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "_scvi_batch": {
+        "dtype": "int16",
+        "n_missing": 0,
+        "n_unique": 346,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "_scvi_labels": {
+        "dtype": "int8",
+        "n_missing": 0,
+        "n_unique": 1,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "leiden1_anno": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 1,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "n_genes": {
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 5200,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "n_genes_by_counts": {
+        "dtype": "int32",
+        "n_missing": 0,
+        "n_unique": 5200,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "total_counts": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 560997,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "total_counts_mt": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 543588,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "pct_counts_mt": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 922375,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "t_anno": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 11,
+        "value_counts": {
+          "Tn_CD4_LEF1": 200792,
+          "Tcm_CD4_IL7R": 179731,
+          "Tem_CD8_GZMK": 172788,
+          "Tctl_CD8_GZMB": 158997,
+          "Tnkl_KLRD1": 141168,
+          "Tem_CD4_GZMK": 112645,
+          "Ta_CD8_MKI67": 100997,
+          "Tn_CD8_LEF1": 95142,
+          "Ta_CD4_MKI67": 56901,
+          "Treg_CD4_FOXP3": 42688,
+          "Tex_CD8_PDCD1": 28569
+        }
+      },
+      "disease": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 4,
+        "value_counts": {
+          "CAR-T_CRS": 520752,
+          "COVID19": 457846,
+          "HC": 180542,
+          "SLE": 131278
+        }
+      },
+      "severity": {
+        "dtype": "category",
+        "n_missing": 9237,
+        "n_unique": 4,
+        "value_counts": {
+          "Moderate": 511995,
+          "Severe": 404991,
+          "No_CRS": 183653,
+          "HC": 180542,
+          "<NA>": 9237
+        }
+      },
+      "stage": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 7,
+        "value_counts": {
+          "COVID19_con": 295532,
+          "CAR-T_CRS_before": 196460,
+          "CAR-T_CRS_con": 183036,
+          "HC": 180542,
+          "COVID19_pro": 162314,
+          "CAR-T_CRS_pro": 141256,
+          "SLE": 131278
+        }
+      }
+    }
+  },
+  "var": {
+    "n_columns": 10,
+    "columns": [
+      "mt",
+      "n_cells",
+      "highly_variable",
+      "means",
+      "dispersions",
+      "dispersions_norm",
+      "n_cells_by_counts",
+      "mean_counts",
+      "pct_dropout_by_counts",
+      "total_counts"
+    ],
+    "column_summary": {
+      "mt": {
+        "dtype": "bool",
+        "n_missing": 0,
+        "n_unique": 2
+      },
+      "n_cells": {
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 14016
+      },
+      "highly_variable": {
+        "dtype": "bool",
+        "n_missing": 0,
+        "n_unique": 2
+      },
+      "means": {
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 17249
+      },
+      "dispersions": {
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 17249
+      },
+      "dispersions_norm": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 17247
+      },
+      "n_cells_by_counts": {
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 14016
+      },
+      "mean_counts": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 16931
+      },
+      "pct_dropout_by_counts": {
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 14016
+      },
+      "total_counts": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 16931
+      }
+    },
+    "gene_names_withheld": true
+  },
+  "matrix": {
+    "X_type": "csr_matrix",
+    "X_shape": [
+      1290418,
+      17249
+    ],
+    "layers": {},
+    "raw_present": true,
+    "raw_shape": [
+      1290418,
+      17249
+    ],
+    "raw_var_names_unique": true,
+    "expression_scale_note": "adata.X contains the processed expression matrix used by downstream notebook analyses; raw contains the preserved gene space where available."
+  },
+  "embeddings_and_graph_slots": {
+    "obsm": {
+      "X_scVI": {
+        "type": "ndarray",
+        "shape": [
+          1290418,
+          30
+        ]
+      },
+      "X_umap": {
+        "type": "ndarray",
+        "shape": [
+          1290418,
+          2
+        ]
+      }
+    },
+    "varm": {},
+    "obsp": {},
+    "uns_keys": [
+      "log1p"
+    ]
+  },
+  "runtime": {
+    "python": "3.11.13",
+    "scanpy": "1.11.4",
+    "anndata": "0.12.2",
+    "pandas": "2.3.1",
+    "numpy": "2.2.6"
+  }
+}

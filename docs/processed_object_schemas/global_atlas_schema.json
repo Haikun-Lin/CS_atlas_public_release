@@ -1,0 +1,382 @@
+{
+  "report_type": "processed_anndata_schema",
+  "notebook": "01_global_atlas_analysis.ipynb",
+  "object_name": "adata_main",
+  "source_file_basename": "adata_integrated.h5ad",
+  "generated_at": "2026-06-24T14:36:41",
+  "privacy_note": "This report intentionally excludes expression matrices, cell barcodes, sample IDs, patient IDs, and the full gene list.",
+  "object_dimensions": {
+    "n_cells": 2138694,
+    "n_genes": 17411,
+    "obs_names_unique": true,
+    "var_names_unique": true
+  },
+  "required_obs_columns": [
+    "sample_id",
+    "disease",
+    "stage",
+    "severity",
+    "leiden1_anno",
+    "subcluster_anno",
+    "n_genes_by_counts",
+    "total_counts",
+    "pct_counts_mt"
+  ],
+  "missing_required_obs_columns": [],
+  "expected_categories": {
+    "disease": [
+      "CAR-T_CRS",
+      "COVID19",
+      "SLE",
+      "HC"
+    ],
+    "stage": [
+      "CAR-T_CRS_before",
+      "CAR-T_CRS_pro",
+      "CAR-T_CRS_con",
+      "COVID19_pro",
+      "COVID19_con",
+      "SLE",
+      "HC"
+    ],
+    "severity": [
+      "Moderate",
+      "Severe",
+      "No_CRS",
+      "HC"
+    ]
+  },
+  "observed_expected_category_coverage": {
+    "disease": {
+      "expected": [
+        "CAR-T_CRS",
+        "COVID19",
+        "SLE",
+        "HC"
+      ],
+      "observed_expected_values": [
+        "CAR-T_CRS",
+        "COVID19",
+        "SLE",
+        "HC"
+      ],
+      "missing_expected_values": []
+    },
+    "stage": {
+      "expected": [
+        "CAR-T_CRS_before",
+        "CAR-T_CRS_pro",
+        "CAR-T_CRS_con",
+        "COVID19_pro",
+        "COVID19_con",
+        "SLE",
+        "HC"
+      ],
+      "observed_expected_values": [
+        "CAR-T_CRS_before",
+        "CAR-T_CRS_con",
+        "CAR-T_CRS_pro",
+        "COVID19_con",
+        "COVID19_pro",
+        "SLE",
+        "HC"
+      ],
+      "missing_expected_values": []
+    },
+    "severity": {
+      "expected": [
+        "Moderate",
+        "Severe",
+        "No_CRS",
+        "HC"
+      ],
+      "observed_expected_values": [
+        "Moderate",
+        "No_CRS",
+        "Severe",
+        "HC"
+      ],
+      "missing_expected_values": []
+    }
+  },
+  "obs": {
+    "n_columns": 19,
+    "columns": [
+      "n_genes_by_counts",
+      "log1p_n_genes_by_counts",
+      "total_counts",
+      "log1p_total_counts",
+      "pct_counts_in_top_20_genes",
+      "total_counts_mt",
+      "log1p_total_counts_mt",
+      "pct_counts_mt",
+      "sample_id",
+      "n_genes",
+      "batch",
+      "_scvi_batch",
+      "_scvi_labels",
+      "leiden1_anno",
+      "disease",
+      "subcluster_anno",
+      "severity",
+      "stage"
+    ],
+    "column_summary": {
+      "n_genes_by_counts": {
+        "dtype": "int32",
+        "n_missing": 0,
+        "n_unique": 5774,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "log1p_n_genes_by_counts": {
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 5774,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "total_counts": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 1189095,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "log1p_total_counts": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 935763,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "pct_counts_in_top_20_genes": {
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 1890116,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "total_counts_mt": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 1168648,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "log1p_total_counts_mt": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 1055248,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "pct_counts_mt": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 1660130,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "sample_id": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 411,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "n_genes": {
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 5183,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "batch": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 25,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "_scvi_batch": {
+        "dtype": "int16",
+        "n_missing": 0,
+        "n_unique": 411,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "_scvi_labels": {
+        "dtype": "int8",
+        "n_missing": 0,
+        "n_unique": 1,
+        "values_withheld": "Values are not exported to avoid exposing sample, patient, cell-level, or potentially identifying metadata."
+      },
+      "leiden1_anno": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 6,
+        "value_counts": {
+          "T": 1278276,
+          "B": 411762,
+          "Myeloid": 351189,
+          "NK": 81485,
+          "Plasma": 12144,
+          "pDC": 3838
+        }
+      },
+      "disease": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 4,
+        "value_counts": {
+          "COVID19": 1082877,
+          "CAR-T_CRS": 594075,
+          "HC": 260870,
+          "SLE": 200872
+        }
+      },
+      "subcluster_anno": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 24,
+        "value_counts": {
+          "Bn_CD19_TCL1A": 257285,
+          "Tn_CD4_LEF1": 200521,
+          "Tcm_CD4_IL7R": 179235,
+          "Tem_CD8_GZMK": 172349,
+          "Tctl_CD8_GZMB": 158595,
+          "Bm_CD19_CD27": 154176,
+          "Mono_CD14_S100A8": 151879,
+          "Tnkl_KLRD1": 140799,
+          "Mono_CD14_IL1B": 134643,
+          "Tem_CD4_GZMK": 112181,
+          "Tn_CD8_LEF1": 95024,
+          "Ta_CD8_MKI67": 91822,
+          "NK_TXK": 56957,
+          "Ta_CD4_MKI67": 56710,
+          "Mono_CD16_LST1": 45076,
+          "Treg_CD4_FOXP3": 42477,
+          "Tex_CD8_PDCD1": 28563,
+          "cDC_CD1C": 14432,
+          "NK_CCL3": 12635,
+          "Plasma_TNFRSF17": 12445,
+          "NK_KLRC1": 11893,
+          "pDC_LILRA4": 3838,
+          "Mono_CD14_IFI44": 3022,
+          "Mono_CD14_CD16": 2137
+        }
+      },
+      "severity": {
+        "dtype": "category",
+        "n_missing": 12854,
+        "n_unique": 4,
+        "value_counts": {
+          "Moderate": 962923,
+          "Severe": 698690,
+          "HC": 260870,
+          "No_CRS": 203357,
+          "<NA>": 12854
+        }
+      },
+      "stage": {
+        "dtype": "category",
+        "n_missing": 0,
+        "n_unique": 7,
+        "value_counts": {
+          "COVID19_con": 717665,
+          "COVID19_pro": 365212,
+          "HC": 260870,
+          "CAR-T_CRS_before": 252715,
+          "SLE": 200872,
+          "CAR-T_CRS_con": 191238,
+          "CAR-T_CRS_pro": 150122
+        }
+      }
+    }
+  },
+  "var": {
+    "n_columns": 6,
+    "columns": [
+      "mt",
+      "n_cells",
+      "highly_variable",
+      "means",
+      "dispersions",
+      "dispersions_norm"
+    ],
+    "column_summary": {
+      "mt": {
+        "dtype": "bool",
+        "n_missing": 0,
+        "n_unique": 2
+      },
+      "n_cells": {
+        "dtype": "int64",
+        "n_missing": 0,
+        "n_unique": 15200
+      },
+      "highly_variable": {
+        "dtype": "bool",
+        "n_missing": 0,
+        "n_unique": 2
+      },
+      "means": {
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 17411
+      },
+      "dispersions": {
+        "dtype": "float64",
+        "n_missing": 0,
+        "n_unique": 17411
+      },
+      "dispersions_norm": {
+        "dtype": "float32",
+        "n_missing": 0,
+        "n_unique": 17409
+      }
+    },
+    "gene_names_withheld": true
+  },
+  "matrix": {
+    "X_type": "csr_matrix",
+    "X_shape": [
+      2138694,
+      17411
+    ],
+    "layers": {},
+    "raw_present": true,
+    "raw_shape": [
+      2138694,
+      17411
+    ],
+    "raw_var_names_unique": true,
+    "expression_scale_note": "adata.X contains the processed expression matrix used by downstream notebook analyses; raw contains the preserved gene space where available."
+  },
+  "embeddings_and_graph_slots": {
+    "obsm": {
+      "X_pca": {
+        "type": "ndarray",
+        "shape": [
+          2138694,
+          50
+        ]
+      },
+      "X_scVI_ep10": {
+        "type": "ndarray",
+        "shape": [
+          2138694,
+          30
+        ]
+      },
+      "X_umap": {
+        "type": "ndarray",
+        "shape": [
+          2138694,
+          2
+        ]
+      }
+    },
+    "varm": {},
+    "obsp": {},
+    "uns_keys": [
+      "log1p"
+    ]
+  },
+  "runtime": {
+    "python": "3.11.13",
+    "scanpy": "1.11.4",
+    "anndata": "0.12.2",
+    "pandas": "2.3.1",
+    "numpy": "2.2.6"
+  }
+}
