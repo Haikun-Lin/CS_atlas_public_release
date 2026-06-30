@@ -22,7 +22,7 @@ human single-cell datasets.
 
 The notebooks remain the primary analytical records. Recurrent scoring, DEG,
 enrichment, plotting, and statistical code is intentionally retained inside
-them.
+them. Generated figure outputs were not retained due to upload size limit.
 
 ## Repository scope
 
