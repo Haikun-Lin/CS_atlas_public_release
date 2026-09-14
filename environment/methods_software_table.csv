@@ -1,0 +1,36 @@
+Software/package/algorithm,Language or platform,Version,Purpose in this study,Citation/URL,record_source
+Python,Python,3.11.13,Notebook execution runtime,https://www.python.org/downloads/release/python-31113/,environment/methods_software_table.csv
+Jupyter/IPython,Python,9.8.0,Interactive notebook execution,https://ipython.readthedocs.io/en/9.8.0/index.html,environment/methods_software_table.csv
+Python standard library,Python,3.11.13,"Runtime logging, timestamps, elapsed-time measurement, and majority-lineage counting with time, datetime, and collections",https://www.python.org/downloads/release/python-31113/,environment/methods_software_table.csv
+Scanpy,Python,1.11.4,Single-cell AnnData analysis and plotting,"Wolf FA, Angerer P, Theis FJ. SCANPY: large-scale single-cell gene expression data analysis. Genome Biol. 2018 Feb 6;19(1):15. doi: 10.1186/s13059-017-1382-0. PMID: 29409532; PMCID: PMC5802054.",environment/methods_software_table.csv
+AnnData,Python,0.12.2,Processed single-cell object representation,"Wolf FA, Angerer P, Theis FJ. SCANPY: large-scale single-cell gene expression data analysis. Genome Biol. 2018 Feb 6;19(1):15. doi: 10.1186/s13059-017-1382-0. PMID: 29409532; PMCID: PMC5802054.",environment/methods_software_table.csv
+pandas,Python,2.3.1,Tabular data handling and export,https://pypi.org/project/pandas/,environment/methods_software_table.csv
+NumPy,Python,2.2.6,Numerical calculations and random sampling,https://pypi.org/project/numpy/2.2.6/,environment/methods_software_table.csv
+SciPy,Python,1.15.3,"Sparse matrices, statistics, and Matrix Market export",https://pypi.org/project/scipy/1.15.3/,environment/methods_software_table.csv
+Matplotlib,Python,3.10.5,Figure generation,https://pypi.org/project/matplotlib/,environment/methods_software_table.csv
+Seaborn,Python,0.13.2,Statistical visualization,https://pypi.org/project/seaborn/,environment/methods_software_table.csv
+GSEApy,Python,1.1.11,Gene-set and GO enrichment analyses,"Fang Z, Liu X, Peltz G. GSEApy: a comprehensive package for performing gene set enrichment analysis in Python. Bioinformatics. 2023 Jan 1;39(1):btac757. doi: 10.1093/bioinformatics/btac757. PMID: 36426870; PMCID: PMC9805564.",environment/methods_software_table.csv
+Plotly,Python,6.3.0,Sankey and interactive-style figure construction,https://pypi.org/project/plotly/,environment/methods_software_table.csv
+OpenPyXL,Python,3.1.5,Excel supplementary-table formatting,https://pypi.org/project/openpyxl/,environment/methods_software_table.csv
+PyTorch,Python,2.5.1.post207,"Masked-expression autoencoder training, latent encoding, and gradient-based gene attribution",https://pytorch.org/,environment/methods_software_table.csv
+scikit-learn,Python,1.7.1,Nearest-neighbor analysis for cross-seed representation stability,"Scikit-learn: Machine Learning in Python, Pedregosa et al., JMLR 12, pp. 2825-2830, 2011.",environment/methods_software_table.csv
+statsmodels,Python,0.14.5,Multiple-testing correction for statistical analyses,https://www.statsmodels.org/stable/index.html,environment/methods_software_table.csv
+pynndescent,Python,0.5.13,Approximate nearest-neighbor search for post hoc clinical risk anchoring,https://github.com/lmcinnes/pynndescent,environment/methods_software_table.csv
+rpy2,Python/R bridge,3.6.4,Notebook R bridge used by preserved analysis sections,https://pypi.org/project/rpy2/,environment/methods_software_table.csv
+adjustText,Python,1.3.0,Non-overlapping text labels in plots,https://pypi.org/project/adjustText/,environment/methods_software_table.csv
+R,R,4.5.1,R execution runtime,https://www.r-project.org/,environment/methods_software_table.csv
+CellChat,R,2.2.0,Cell-cell communication inference and visualization,"Jin S, Guerrero-Juarez CF, Zhang L, Chang I, Ramos R, Kuan CH, Myung P, Plikus MV, Nie Q. Inference and analysis of cell-cell communication using CellChat. Nat Commun. 2021 Feb 17;12(1):1088. doi: 10.1038/s41467-021-21246-9. PMID: 33597522; PMCID: PMC7889871.",environment/methods_software_table.csv
+Matrix,R,1.7.4,Sparse matrix input handling,https://cran.r-project.org/web/packages/Matrix/index.html,environment/methods_software_table.csv
+future,R,1.69.0,Parallel execution configuration,https://cran.r-project.org/web/packages/future/index.html,environment/methods_software_table.csv
+dplyr,R,1.2.0,Data manipulation,https://cran.r-project.org/web/packages/dplyr/index.html,environment/methods_software_table.csv
+purrr,R,1.2.1,Functional iteration,https://cran.r-project.org/web/packages/purrr/index.html,environment/methods_software_table.csv
+tibble,R,3.3.1,Tidy tabular outputs,https://cran.r-project.org/web/packages/tibble/index.html,environment/methods_software_table.csv
+ggplot2,R,4.0.2,Figure generation,https://cran.r-project.org/web/packages/ggplot2/index.html,environment/methods_software_table.csv
+pheatmap,R,1.0.13,Heatmap visualization,https://cran.r-project.org/web/packages/pheatmap/index.html,environment/methods_software_table.csv
+RColorBrewer,R,1.1.3,Color palettes,https://cran.r-project.org/web/packages/RColorBrewer/index.html,environment/methods_software_table.csv
+circlize,R,0.4.17,Circular network visualization,https://cran.r-project.org/web/packages/circlize/index.html,environment/methods_software_table.csv
+scales,R,1.4.0,Plot scaling and formatting,https://cran.r-project.org/web/packages/scales/index.html,environment/methods_software_table.csv
+GraphPad Prism,Desktop software,9.0.0,"Statistical tests and plotting, including boxplots, stacked barplots, and violin plots",www.graphpad.com,
+Tbtools-II,Desktop software,2.471,Circular heatmaps in Fig. S2D,"Chen C., Wu Y., Li J., Wang X., Zeng Z., Xu J., Liu Y., Feng J., Chen H., He Y., and Xia R. (2023). TBtools-II: A ""one for all, all for one"" bioinformatics platform for biological big-data mining. Mol. Plant. 16, 1733-1742.",
+Adobe Illustrator,Desktop software,29.1,"Graphical editing, panel assembly, and final figure layout",https://www.adobe.com/products/illustrator.html,
+BioRender,Web platform,,Graphical abstract creation,https://app.biorender.com/,
