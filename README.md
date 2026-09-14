@@ -1,16 +1,14 @@
 # Cross-disease single-cell cytokine storm atlas
 
-This repository contains downstream analytical workflow code associated with the
+This repository contains downstream analysis code associated with the
 cross-disease single-cell cytokine storm atlas manuscript.
 
-The repository is notebook-centered and object-centered. The notebooks and
-scripts document downstream analysis, figure generation, supplementary-table
-generation, and CellChat workflows that start from processed AnnData objects.
-The processed AnnData objects are not distributed with this repository
-because of their file size and the data-use considerations associated with
-human single-cell datasets.
+The repository is notebook-centered. The notebooks and CellChat scripts record
+the downstream analyses used for figure generation and selected source tables.
+Raw sequencing data, processed AnnData objects, RDS files, matrix files, and
+patient-level private information are not included.
 
-## Primary notebooks
+## Notebooks
 
 - `notebooks/01_global_atlas_analysis.ipynb` - integrated immune-cell atlas,
   global QC and integration assessment, cytokine-storm scoring, global figures
@@ -19,67 +17,53 @@ human single-cell datasets.
   monocyte analyses, including COVID-19, SLE, and CAR-T-associated analyses.
 - `notebooks/03_t_lineage_cart_analysis.ipynb` - T-lineage and CAR-T cohort
   analyses.
+- `notebooks/04_mae_monocyte_input_build.ipynb` - construction of the frozen
+  monocyte input, including balanced-consensus HVG5000 feature selection,
+  metadata checks, and export of the analysis-ready AnnData object.
+- `notebooks/05_mae_model_training.ipynb` - five-seed masked-autoencoder model
+  training, latent representation export, model-history recording, and
+  seed-neighborhood stability QC.
+- `notebooks/06_mae_figure6_analysis.ipynb` - masked-autoencoder analysis and
+  figure-generation workflow for Fig. 6, including clinical risk localization,
+  training convergence, attribution, reference-state reversion, K90 gene-set
+  analysis, atlas-program reversion, and predicted regulator visualization.
+- `notebooks/07_mae_supplementary_figure6_analysis.ipynb` - supplementary
+  Fig. S6 workflow, including seed-neighborhood stability, matched-control
+  calibration, seed-wise K90 stability, disease-specific K90 expression
+  summaries, and the quadrant scaffold.
 
-The notebooks remain the primary analytical records. Recurrent scoring, DEG,
-enrichment, plotting, and statistical code is intentionally retained inside
-them. Generated figure outputs were not retained due to upload size limit.
+## CellChat scripts
 
-## Repository scope
+Standalone CellChat workflows are stored in `scripts/cellchat/`:
 
-Included downstream workflows cover:
+- `run_cellchat_cart.R`
+- `run_cellchat_covid19.R`
+- `run_cellchat_sle.R`
+- `analyze_cellchat_cart.R`
+- `analyze_cellchat_covid19.R`
+- `analyze_cellchat_sle.R`
 
-- metadata harmonization and annotation naming;
-- sample, disease, severity, stage, and group mapping;
-- processed-object validation;
-- QC and mitochondrial-content inspection;
-- downstream filtering of processed objects;
-- integration-quality assessment;
-- cytokine-storm and functional-module scoring;
-- differential-expression and enrichment analyses;
-- statistical testing;
-- figure and supplementary-table generation;
-- CellChat input preparation and downstream CellChat result visualization.
+The Python notebooks prepare CellChat input folders. The R scripts run CellChat
+and generate downstream CellChat summaries and plots.
 
-The repository does not include raw sequencing preprocessing,
-alignment/counting, initial count-matrix generation, raw-data distribution, or
-the full upstream integration/batch-correction workflow.
+## Environment
 
-## Public documentation
+Compact environment records are provided in `environment/`:
 
-See:
+- `methods_software_table.csv`
+- `python_requirements_public.txt`
 
-- `docs/repository_scope.md`
-- `docs/execution_manifest.md`
-- `docs/input_object_requirements.md`
-- `docs/analysis_workflow.md`
-- `docs/reproducibility_notes.md`
-- `docs/processed_object_schemas/`
-- `figure_table_mapping/figure_code_mapping.md`
-- `figure_table_mapping/supplementary_table_mapping.md`
-- `environment/methods_software_table.csv`
+Package versions should be interpreted as the analysis environment used for the
+public code release. Standard-library modules and full transitive dependency
+lists are not exhaustively reported.
 
-## Data availability and path variables
+## Data and paths
 
-Large biological data objects are not tracked. The processed AnnData objects
-used by the downstream workflows are described through object-schema reports in
-`docs/processed_object_schemas/` and through code-level expectations in
-`docs/input_object_requirements.md`.
+Large biological data objects are not tracked. Notebook setup cells document
+environment-variable names for private input files and output folders, such as
+`ATLAS_H5AD`, `MYELOID_H5AD`, `T_LINEAGE_H5AD`, MAE analysis path variables,
+and CellChat-specific path variables.
 
-Notebook and script setup cells document the environment-variable names used for
-private input locations and generated output locations, for example
-`ATLAS_H5AD`, `MYELOID_H5AD`, `T_LINEAGE_H5AD`, and CellChat-specific path
-variables. These variables are recorded to make the downstream workflow
-structure explicit.
+Local paths, patient-level private information, processed AnnData objects,
+matrix files, and RDS files should not be committed.
 
-Do not commit patient-level private information, processed AnnData objects,
-matrix files, RDS objects, or machine-specific local/server paths.
-
-## Release status
-
-All three public-facing notebooks have undergone manual scientific review and
-targeted workflow cleanup. CellChat execution and downstream CellChat analyses
-are maintained as standalone scripts under `scripts/cellchat/`.
-
-Scientific thresholds, normalization choices, subcluster exclusions, gene sets,
-and output definitions remain analysis-specific and are documented in the
-notebooks, mapping files, and manuscript supplementary materials.
